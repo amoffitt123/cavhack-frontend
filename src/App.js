@@ -11,15 +11,28 @@ class App extends Component {
     super(props)
 
     // set title of the webpage when component is created
-    document.title = 'My Profile'
+    document.title = 'CavHack Game Central'
   }
 
   render() {
     return (
       <div>
         {/* ! ADD NAVBAR HERE */}
-
-
+        <Navbar>
+          <Navbar.Header>
+            <Navbar.Brand>
+              CavHack Game Central
+          </Navbar.Brand>
+          </Navbar.Header>
+          <Nav>
+            <NavItem href="/">
+              Home
+          </NavItem>
+            <NavItem href="/profiles">
+              All Games
+          </NavItem>
+          </Nav>
+        </Navbar>
         {/* router to navigate between pages, each page is a container */}
         <Switch>
           <Route exact
@@ -34,6 +47,7 @@ class App extends Component {
             )}
           />
         </Switch>
+
       </div>
     );
   }
